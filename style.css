@@ -14,10 +14,10 @@
 }
 
 .punteggio{
-  width: 100%
+  width: 80%
 }
 .punteggio span {
-  width: 49%;
+  width: 49.5%;
   text-align: center;
   display: inline-block;
   margin: 10px auto;
@@ -36,7 +36,7 @@
   border:  1px solid black;
   width: calc(100% / 8);
   height: calc(100% / 8);
-  cursor: crosshair; 
+  cursor: crosshair;
 }
 
 .redWannabe{

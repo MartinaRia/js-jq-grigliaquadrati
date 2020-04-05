@@ -4,6 +4,19 @@
 
 $(document).ready(function(){
 
+  //CREAZIONE DIV ---------------------------------------------
+
+  var divX64 = []
+  for (var i = 1; i <= 64; i++) {
+    var div = '<div></div>';
+    divX64.push(div);
+  }
+  $('.tablecontainer').html(divX64);
+  $('.tablecontainer div').addClass('square');
+
+
+
+  //ASSEGNAZIONE RANDOM CLASSE REDWANABE ------------------------
 
   var random = [];
 
@@ -25,6 +38,9 @@ $(document).ready(function(){
 
   }
 
+
+
+  //EVENTI SCATENATI AL CLICK ----------------------------------
 
   // tenere il punteggio dei Verdi VS Rossi
   var redPoint = 0, greenPoint = 0;
@@ -49,7 +65,6 @@ $(document).ready(function(){
       }
     }
   );
-
 
 
 });
