@@ -1,0 +1,43 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.punteggio{
+  width: 100%
+}
+.punteggio span {
+  width: 49%;
+  text-align: center;
+  display: inline-block;
+  margin: 10px auto;
+}
+
+
+.tablecontainer{
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.square {
+  border:  1px solid black;
+  width: calc(100% / 8);
+  height: calc(100% / 8);
+}
+
+.redWannabe{
+  /* background-color: red; */
+}
