@@ -36,6 +36,7 @@
   border:  1px solid black;
   width: calc(100% / 8);
   height: calc(100% / 8);
+  cursor: crosshair; 
 }
 
 .redWannabe{

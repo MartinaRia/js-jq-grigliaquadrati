@@ -4,39 +4,30 @@
 
 $(document).ready(function(){
 
-  //funzione per non ripetere i numeri
-  function generateRan(){
 
-    var random = [];
-    for(var i = 0;i<20 ; i++){
+  var random = [];
 
-        var temp = Math.floor(Math.random()*20);
-        console.log(temp);
-        console.log(random.indexOf(temp));
-        if(random.indexOf(temp) == -1){
-            random.push(temp);
-            console.log(random);
-        } else{
-         i--;
-         }
+  //ciclo per selezionare 15 numeri che non si ripetono
+  for (var i = 1; i <= 15 ; i++){
+    var num = Math.floor(Math.random()*64); //genera numero
+    if(random.indexOf(num) == -1){ //se, cercando quel numero all'interno della variabile, il numero non esiste allora l'index sulla variabile sarà uguale a -1
+        random.push(num); //e quindi il numero può essere inserito in variabile
+    } else {
+     i--; //altrimenti si torna indietro di uno nel ciclo e si rigenera un nuovo numero
     }
-    console.log(random)
-}
+  }
 
-generateRan();
+  //ciclo per pescare i numeri dalla variabile e assegnare la classe ai quadrati con stesso index del numero pescato
+  for (var i = 0; i < random.length ; i++) {
 
-  /*//genera numeri e assegna la classe a quei numeri
-  for (var i = 1; i <= 15 ; i++) {
-
-    var randomNum = Math.floor(Math.random() * 64);
+    var randomNum = random[i]
     $(".square").eq(randomNum).addClass("redWannabe");
-    //console.log(randomNum);
 
-  }*/
+  }
 
 
   // tenere il punteggio dei Verdi VS Rossi
-var redPoint = 0, greenPoint = 0;
+  var redPoint = 0, greenPoint = 0;
 
   $('.square').click(
     function () {
@@ -58,27 +49,6 @@ var redPoint = 0, greenPoint = 0;
       }
     }
   );
-
-
-
-  // faccio cose
-  // $('.square').click(
-  //   function () {
-  //     if($(this).hasClass('redWannabe')){
-  //       $(this).css('background', 'red');
-  //       redPoint++;
-  //       console.log("punteggio rosso: " + redPoint);
-  //       $('.prossa').html("punteggio rosso: " + redPoint);
-  //     } else {
-  //       $(this).css('background', 'green');
-  //       greenPoint++;
-  //       console.log("punteggio verde: " + greenPoint);
-  //       $('.pverde').html("punteggio verde: " + greenPoint);
-  //     }
-  //   }
-  // );
-
-
 
 
 
